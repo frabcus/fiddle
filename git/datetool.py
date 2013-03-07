@@ -20,7 +20,7 @@ def parsedate(datestring, outformat = "%d-%b-%Y", silent=False, fuzzy=False, str
   if nones==0:
     d = datetime.date(value.year,value.month,value.day)
     return d.strftime(outformat)
-    #return u"%04d-%02d-%02d"%(retval[0], retval[1], retval[2])
+    return u"%04d-%02d-%02d"%(retval[0], retval[1], retval[2])
     pass    
   if not silent: # and there's some but not all date fragments
       raise AttributeError, "Partial date: %s %r"%(datestring, retval)
